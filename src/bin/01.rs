@@ -9,7 +9,15 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    Some(input.split("\n\n").map(get_cals).sorted().rev().take(3).sum())
+    Some(
+        input
+            .split("\n\n")
+            .map(get_cals)
+            .sorted()
+            .rev()
+            .take(3)
+            .sum(),
+    )
 }
 
 fn main() {
